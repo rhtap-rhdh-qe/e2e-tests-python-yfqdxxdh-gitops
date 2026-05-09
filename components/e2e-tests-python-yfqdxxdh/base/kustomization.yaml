@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  argocd/app-name: e2e-tests-python-yfqdxxdh
+  janus-idp.io/tekton: e2e-tests-python-yfqdxxdh
+  backstage.io/kubernetes-id: e2e-tests-python-yfqdxxdh
+  backstage.io/kubernetes-namespace: tssc-app 
+  app.kubernetes.io/part-of: e2e-tests-python-yfqdxxdh
+resources:
+  - deployment.yaml
+  - route.yaml
+  - service.yaml
